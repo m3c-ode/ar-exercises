@@ -32,6 +32,7 @@ puts "#{@mens_store}"
 
 @mens_store.each {|store| puts "Store name: #{store.name}. Revenue: #{store.annual_revenue}$"}
 
+# Query with greater than
 # @womens_store = Store.where("womens_apparel= true AND annual_revenue < 1000000")
 @womens_store = Store.where(womens_apparel: true).where('annual_revenue > 1000000')
 
